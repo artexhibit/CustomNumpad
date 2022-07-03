@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		781088132870C3C400466969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088122870C3C400466969 /* AppDelegate.swift */; };
 		781088152870C3C400466969 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088142870C3C400466969 /* SceneDelegate.swift */; };
-		781088172870C3C400466969 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088162870C3C400466969 /* ViewController.swift */; };
+		781088172870C3C400466969 /* NumpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088162870C3C400466969 /* NumpadViewController.swift */; };
 		7810881A2870C3C400466969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781088182870C3C400466969 /* Main.storyboard */; };
 		7810881C2870C3C600466969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7810881B2870C3C600466969 /* Assets.xcassets */; };
 		7810881F2870C3C600466969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7810881D2870C3C600466969 /* LaunchScreen.storyboard */; };
+		781088272870C6B700466969 /* Numpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781088262870C6B700466969 /* Numpad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7810880F2870C3C400466969 /* CustomNumpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNumpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781088122870C3C400466969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		781088142870C3C400466969 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		781088162870C3C400466969 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		781088162870C3C400466969 /* NumpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadViewController.swift; sourceTree = "<group>"; };
 		781088192870C3C400466969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7810881B2870C3C600466969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7810881E2870C3C600466969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		781088202870C3C600466969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781088262870C6B700466969 /* Numpad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Numpad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				781088122870C3C400466969 /* AppDelegate.swift */,
 				781088142870C3C400466969 /* SceneDelegate.swift */,
-				781088162870C3C400466969 /* ViewController.swift */,
+				781088162870C3C400466969 /* NumpadViewController.swift */,
+				781088262870C6B700466969 /* Numpad.xib */,
 				781088182870C3C400466969 /* Main.storyboard */,
 				7810881B2870C3C600466969 /* Assets.xcassets */,
 				7810881D2870C3C600466969 /* LaunchScreen.storyboard */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				781088272870C6B700466969 /* Numpad.xib in Resources */,
 				7810881F2870C3C600466969 /* LaunchScreen.storyboard in Resources */,
 				7810881C2870C3C600466969 /* Assets.xcassets in Resources */,
 				7810881A2870C3C400466969 /* Main.storyboard in Resources */,
@@ -138,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781088172870C3C400466969 /* ViewController.swift in Sources */,
+				781088172870C3C400466969 /* NumpadViewController.swift in Sources */,
 				781088132870C3C400466969 /* AppDelegate.swift in Sources */,
 				781088152870C3C400466969 /* SceneDelegate.swift in Sources */,
 			);
