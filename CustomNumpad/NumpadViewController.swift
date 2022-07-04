@@ -9,10 +9,12 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupKeyboardHide()
         textField.delegate = self
+        
+        let numpadView = Numpad(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+        textField.inputView = numpadView
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("hi")
     }
 }
 
