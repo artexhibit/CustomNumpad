@@ -271,7 +271,7 @@
                 <constraint firstItem="req-q9-lx2" firstAttribute="top" secondItem="w35-oq-szw" secondAttribute="top" id="hrp-Zn-ETe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="479.71014492753625" y="697.09821428571422"/>
+            <point key="canvasLocation" x="161" y="682"/>
         </view>
     </objects>
     <resources>

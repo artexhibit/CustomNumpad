@@ -15,4 +15,19 @@ class CalculatorButton: UIButton {
             }
         }
      }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    private func setup() {
+        clipsToBounds = true
+        layer.cornerRadius = frame.width / 2
+    }
 }

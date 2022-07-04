@@ -20,14 +20,5 @@ class Numpad: UIView {
         let view = Bundle.main.loadNibNamed(xibFileName, owner: self, options: nil)![0] as! UIView
         self.addSubview(view)
         view.frame = self.bounds
-        
-        roundButtons()
-    }
-    
-    func roundButtons() {
-        for button in buttons {
-            button.clipsToBounds = true
-            button.layer.cornerRadius = button.frame.width / 2
-        }
     }
 }
