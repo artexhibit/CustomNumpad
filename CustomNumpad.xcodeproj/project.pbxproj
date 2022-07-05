@@ -13,7 +13,7 @@
 		7810881A2870C3C400466969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781088182870C3C400466969 /* Main.storyboard */; };
 		7810881C2870C3C600466969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7810881B2870C3C600466969 /* Assets.xcassets */; };
 		7810881F2870C3C600466969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7810881D2870C3C600466969 /* LaunchScreen.storyboard */; };
-		782C400D28735F4D007CE091 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C400C28735F4D007CE091 /* CalculatorButton.swift */; };
+		782C400D28735F4D007CE091 /* NumpadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C400C28735F4D007CE091 /* NumpadButton.swift */; };
 		785CAB032871CB90005D9336 /* Numpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785CAB022871CB90005D9336 /* Numpad.xib */; };
 		785CAB072871D8B0005D9336 /* Numpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CAB062871D8B0005D9336 /* Numpad.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,7 @@
 		7810881B2870C3C600466969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7810881E2870C3C600466969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		781088202870C3C600466969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		782C400C28735F4D007CE091 /* CalculatorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		782C400C28735F4D007CE091 /* NumpadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumpadButton.swift; sourceTree = "<group>"; };
 		785CAB022871CB90005D9336 /* Numpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Numpad.xib; sourceTree = "<group>"; };
 		785CAB062871D8B0005D9336 /* Numpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numpad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,7 @@
 				781088122870C3C400466969 /* AppDelegate.swift */,
 				781088142870C3C400466969 /* SceneDelegate.swift */,
 				785CAB062871D8B0005D9336 /* Numpad.swift */,
-				782C400C28735F4D007CE091 /* CalculatorButton.swift */,
+				782C400C28735F4D007CE091 /* NumpadButton.swift */,
 				781088162870C3C400466969 /* NumpadViewController.swift */,
 				785CAB022871CB90005D9336 /* Numpad.xib */,
 				781088182870C3C400466969 /* Main.storyboard */,
@@ -152,7 +152,7 @@
 				781088172870C3C400466969 /* NumpadViewController.swift in Sources */,
 				781088132870C3C400466969 /* AppDelegate.swift in Sources */,
 				781088152870C3C400466969 /* SceneDelegate.swift in Sources */,
-				782C400D28735F4D007CE091 /* CalculatorButton.swift in Sources */,
+				782C400D28735F4D007CE091 /* NumpadButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
