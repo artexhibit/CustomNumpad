@@ -5,16 +5,21 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     
+    let numpadView = NumpadView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupKeyboardHide()
         textField.delegate = self
-        
-        let numpadView = Numpad(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
         textField.inputView = numpadView
+        textField.inputView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
     }
 }
 
