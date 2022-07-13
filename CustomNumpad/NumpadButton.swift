@@ -30,15 +30,16 @@ class NumpadButton: UIButton {
     }
     
     private func setupButtonStyle() {
-        let buttonSize = frame.height / 2
-        let symbolConfig = UIImage.SymbolConfiguration(pointSize: buttonSize)
+        let symbolSize = frame.height / 2
+        let numberSize = frame.height / 1.7
+        let symbolConfig = UIImage.SymbolConfiguration(pointSize: symbolSize)
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
         
         //round corners
         clipsToBounds = false
         layer.cornerRadius = windowScene.interfaceOrientation == .portrait ? 15 : 5
         //layout buttons label size to fit the button height
-        titleLabel?.font = UIFont.systemFont(ofSize: buttonSize)
+        titleLabel?.font = UIFont.systemFont(ofSize: numberSize)
         setPreferredSymbolConfiguration(symbolConfig, forImageIn: .normal)
         //bottom shadow
         layer.shadowOffset = CGSize(width: 0, height: 2.0)

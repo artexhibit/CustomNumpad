@@ -3,18 +3,33 @@ import UIKit
 
 class NumpadView: UIView, UIInputViewAudioFeedback {
     
-    var target: UITextInput?
-    var enableInputClicksWhenVisible: Bool { return true }
+    @IBOutlet weak var resetButton: NumpadButton!
+    @IBOutlet weak var decimalButton: NumpadButton!
     
-    init(target: UITextInput) {
+    var target: UITextInput?
+    var view: UIView?
+    var enableInputClicksWhenVisible: Bool { return true }
+    var decimalSeparator: String {
+        return Locale.current.decimalSeparator ?? "."
+    }
+    let resetButtonTitle = (pressed: "AC", inAction: "C")
+    
+    init(target: UITextInput, view: UIView) {
         super.init(frame: .zero)
         self.target = target
+        self.view = view
         initializeSubview()
+        setupDecimalButton()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         initializeSubview()
+        setupDecimalButton()
+    }
+    
+    func setupDecimalButton() {
+        decimalButton.setTitle(decimalSeparator, for: .normal)
     }
     
     func initializeSubview() {
@@ -25,14 +40,35 @@ class NumpadView: UIView, UIInputViewAudioFeedback {
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
-    @IBAction func buttonPressed(_ sender: NumpadButton) {
+    @IBAction func numberButtonPressed(_ sender: NumpadButton) {
         insertText((sender.titleLabel!.text)!)
+        resetButton.setTitle(resetButtonTitle.inAction, for: .normal)
+    }
+    
+    @IBAction func decimalPressed(_ sender: NumpadButton) {
+        insertText(decimalSeparator)
+    }
+    
+    @IBAction func deleteButtonPressed(_ sender: NumpadButton) {
+        target?.deleteBackward()
+        insertText("")
+    }
+    
+    @IBAction func hideKeyboardButtonPressed(_ sender: NumpadButton) {
+        view?.endEditing(true)
+    }
+    
+    @IBAction func resetButtonPressed(_ sender: NumpadButton) {
+        if let textField = target as? UITextField {
+            textField.text?.removeAll()
+        }
+        resetButton.setTitle(resetButtonTitle.pressed, for: .normal)
     }
     
     func insertText(_ string: String) {
         guard let range = target?.selectedRange else { return }
         if let textField = target as? UITextField, textField.delegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) == false {
-            return 
+            return
         }
         target?.insertText(string)
     }
