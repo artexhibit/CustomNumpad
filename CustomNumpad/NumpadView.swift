@@ -65,6 +65,11 @@ class NumpadView: UIView, UIInputViewAudioFeedback {
         resetButton.setTitle(resetButtonTitle.pressed, for: .normal)
     }
     
+    @IBAction func plusButtonPressed(_ sender: NumpadButton) {
+        insertText("+")
+    }
+    
+    
     func insertText(_ string: String) {
         guard let range = target?.selectedRange else { return }
         if let textField = target as? UITextField, textField.delegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) == false {

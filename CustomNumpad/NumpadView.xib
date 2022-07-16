@@ -221,6 +221,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                     </preferredSymbolConfiguration>
                                                 </state>
+                                                <connections>
+                                                    <action selector="plusButtonPressed:" destination="-1" eventType="touchUpInside" id="dGl-Qy-yDl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9r-jQ-QQ9" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
                                                 <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
