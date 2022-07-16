@@ -1,14 +1,13 @@
 
 import UIKit
 
-class NumpadView: UIView, UIInputViewAudioFeedback {
+class NumpadView: UIView {
     
     @IBOutlet weak var resetButton: NumpadButton!
     @IBOutlet weak var decimalButton: NumpadButton!
     
     var target: UITextInput?
     var view: UIView?
-    var enableInputClicksWhenVisible: Bool { return true }
     var decimalSeparator: String {
         return Locale.current.decimalSeparator ?? "."
     }
