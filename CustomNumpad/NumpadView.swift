@@ -1,13 +1,14 @@
 
 import UIKit
 
-class NumpadView: UIView {
+class NumpadView: UIView, UIInputViewAudioFeedback {
     
     @IBOutlet weak var resetButton: NumpadButton!
     @IBOutlet weak var decimalButton: NumpadButton!
     
     var target: UITextInput?
     var view: UIView?
+    var enableInputClicksWhenVisible: Bool { return false }
     var decimalSeparator: String {
         return Locale.current.decimalSeparator ?? "."
     }
@@ -68,6 +69,9 @@ class NumpadView: UIView {
         insertText("+")
     }
     
+    @IBAction func minusButtonPressed(_ sender: NumpadButton) {
+        insertText("-")
+    }
     
     func insertText(_ string: String) {
         guard let range = target?.selectedRange else { return }

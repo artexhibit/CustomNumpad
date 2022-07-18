@@ -12,46 +12,55 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         textField.inputView = NumpadView(target: textField, view: view)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+        //number formatter
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.locale = .current
         formatter.roundingMode = .down
         
+        //all possible math operation symbols user can add
+        let symbolsSet = Set(["+","-","x","/"])
+        var amountOfSymbols = 0
+        
         let numberString = textField.text ?? ""
         guard let range = Range(range, in: numberString) else { return false }
         let updatedString = numberString.replacingCharacters(in: range, with: string)
-        let correctDecimalString = updatedString.replacingOccurrences(of: formatter.decimalSeparator, with: ".")
-        let completeString = correctDecimalString.replacingOccurrences(of: formatter.groupingSeparator, with: "")
+        let correctDecimalString = updatedString.replacingOccurrences(of: formatter.groupingSeparator, with: "")
+        let completeString = correctDecimalString.replacingOccurrences(of: formatter.decimalSeparator, with: ".")
         
-        guard let value = Double(completeString) else { return false }
+        //current math symbol user add
+        let symbol = symbolsSet.filter(completeString.contains).last ?? ""
+        //if user add math symbol to an empty string - do not insert
+        if string == symbol, numberString.count == 0 { return false }
         
-        let formattedNumber = formatter.string(for: value)
-        textField.text = formattedNumber
+        //count how much math symbols string has. If more that one - do not insert, string can have only one
+        completeString.forEach { character in
+            if symbolsSet.contains(String(character)) {
+                amountOfSymbols += 1
+            }
+        }
+        if amountOfSymbols > 1 { return false }
         
-//        if let firstString = completeString.split(separator: "+").first, let secondString = completeString.split(separator: "+").last {
-//            guard let firstValue = Double(firstString) else { return false }
-//            guard let secondValue = Double(secondString) else { return false }
-//
-//            let firstFormattedNumber = formatter.string(for: firstValue)
-//            let secondFormattedNumber = formatter.string(for: secondValue)
-//
-//            textField.text = "\(firstFormattedNumber ?? "") + \(secondFormattedNumber ?? "")"
-//
-//        if completeString.contains("+") {
-//            let stringArray = completeString.components(separatedBy: "+")
-//            for character in stringArray {
-//                print(character)
-//                guard let value = Double(character) else { return false }
-//                guard let formattedNumber = formatter.string(for: value) else { return false }
-//                textField.text = "\(formattedNumber) + "
-//            }
-//        }
+        //count how much decimals string has. If more that one - do not insert because it can have only one per number
+        let numbersArray = completeString.components(separatedBy: symbol)
+        for number in numbersArray {
+            let amountOfDecimalSigns = number.filter({$0 == "."}).count
+            if amountOfDecimalSigns > 1 { return false }
+        }
+        
+        //create numbers from a string
+        guard let firstNumber = Double(String(numbersArray.first ?? "0")) else { return true }
+        guard let secondNumber = Double(String(numbersArray.last ?? "0")) else { return true }
+        
+        //format numbers and turn them back to string
+        let firstFormattedNumber = formatter.string(for: firstNumber) ?? ""
+        let secondFormattedNumber = formatter.string(for: secondNumber) ?? ""
+        
+        //assign formatted numbers to a textField
+        textField.text = completeString.contains(symbol) ? "\(firstFormattedNumber)\(symbol)\(secondFormattedNumber)" : "\(firstFormattedNumber)"
         
         return string == formatter.decimalSeparator
     }
