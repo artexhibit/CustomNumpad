@@ -2,7 +2,7 @@
 import UIKit
 
 class NumpadViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
@@ -14,55 +14,72 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        //number formatter
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.locale = .current
-        formatter.roundingMode = .down
-        
-        //all possible math operation symbols user can add
-        let symbolsSet = Set(["+","-","x","/"])
-        var amountOfSymbols = 0
-        
+        var shouldChange: Bool = true
+        var symbol: String?
+        let mathSymbols = "+-x/"
+        //current text visible in the text field
         let numberString = textField.text ?? ""
-        guard let range = Range(range, in: numberString) else { return false }
-        let updatedString = numberString.replacingCharacters(in: range, with: string)
-        let correctDecimalString = updatedString.replacingOccurrences(of: formatter.groupingSeparator, with: "")
-        let completeString = correctDecimalString.replacingOccurrences(of: formatter.decimalSeparator, with: ".")
+        //last character in the text field
+        let lastCharacter = numberString.last ?? "+"
+        //get all the numbers displayed in the textfield by separating them from symbols
+        let numbersArray = numberString.components(separatedBy: CharacterSet(charactersIn: mathSymbols))
         
-        //current math symbol user add
-        let symbol = symbolsSet.filter(completeString.contains).last ?? ""
-        //if user add math symbol to an empty string - do not insert
-        if string == symbol, numberString.count == 0 { return false }
-        
-        //count how much math symbols string has. If more that one - do not insert, string can have only one
-        completeString.forEach { character in
-            if symbolsSet.contains(String(character)) {
-                amountOfSymbols += 1
+        if string == "" { return false }
+        //if symbol is a first character in a string - do not insert
+        if numberString == "" {
+            if !Character(string).isNumber { shouldChange = false }
+        }
+        //if a number is entered check for the decimal points
+        else if Character(string).isNumber {
+            if numbersArray.last?.contains(NumberFormatter().decimalSeparator) ?? true && numbersArray.last?.components(separatedBy: NumberFormatter().decimalSeparator).last?.count == 2 && Character(string).isNumber {
+                shouldChange =  false
+            } else {
+                for character in numberString {
+                    if mathSymbols.contains(character){
+                        symbol = String(character)
+                        break
+                    }
+                }
+                if symbol != nil {
+                    textField.text = "\(numbersArray.first?.formatted() ?? "")\(symbol!)\(((numbersArray.last ?? "") + string).formatted())"
+                } else {
+                    textField.text = "\(((numbersArray.first ?? "") + string).formatted())"
+                }
+                shouldChange = false
+            }
+            // if symbol is entered
+        } else {
+            if string == NumberFormatter().decimalSeparator {
+                if !lastCharacter.isNumber { shouldChange = false }
+            }
+            //if there are more than 1 number in numbersArray, calculate the value
+            else if lastCharacter.isNumber {
+                if numbersArray.count > 1 {
+                    let correctDecimalString = numberString.replacingOccurrences(of: NumberFormatter().groupingSeparator, with: "")
+                    let correctString = correctDecimalString.replacingOccurrences(of: NumberFormatter().decimalSeparator, with: ".")
+                    let expression = NSExpression(format: correctString)
+                    let answer = expression.expressionValue(with: nil, context: nil) as! Double
+                    textField.text = "\(answer.formatted())\(string)"
+                    shouldChange = false
+                }
+            } else {
+                //change the symbol
+                textField.text = "\(numberString.dropLast())\(string)"
+                shouldChange = false
             }
         }
-        if amountOfSymbols > 1 { return false }
-        
-        //count how much decimals string has. If more that one - do not insert because it can have only one per number
-        let numbersArray = completeString.components(separatedBy: symbol)
-        for number in numbersArray {
-            let amountOfDecimalSigns = number.filter({$0 == "."}).count
-            if amountOfDecimalSigns > 1 { return false }
-        }
-        
-        //create numbers from a string
-        guard let firstNumber = Double(String(numbersArray.first ?? "0")) else { return true }
-        guard let secondNumber = Double(String(numbersArray.last ?? "0")) else { return true }
-        
-        //format numbers and turn them back to string
-        let firstFormattedNumber = formatter.string(for: firstNumber) ?? ""
-        let secondFormattedNumber = formatter.string(for: secondNumber) ?? ""
-        
-        //assign formatted numbers to a textField
-        textField.text = completeString.contains(symbol) ? "\(firstFormattedNumber)\(symbol)\(secondFormattedNumber)" : "\(firstFormattedNumber)"
-        
-        return string == formatter.decimalSeparator
+        return shouldChange
+    }
+}
+
+extension String {
+    func formatted() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = .current
+        let correctDecimalString = self.replacingOccurrences(of: formatter.groupingSeparator, with: "")
+        let correctString = correctDecimalString.replacingOccurrences(of: formatter.decimalSeparator, with: ".")
+        return formatter.string(from: NSNumber(value: Double(correctString) ?? 0)) ?? ""
     }
 }
 
@@ -77,4 +94,3 @@ extension NumpadViewController {
         view.endEditing(true)
     }
 }
-
