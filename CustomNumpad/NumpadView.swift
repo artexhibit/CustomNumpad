@@ -73,6 +73,19 @@ class NumpadView: UIView, UIInputViewAudioFeedback {
         insertText("-")
     }
     
+    @IBAction func devideButtonPressed(_ sender: NumpadButton) {
+        insertText("/")
+    }
+    
+    
+    @IBAction func multiplyButtonPressed(_ sender: NumpadButton) {
+        insertText("*")
+    }
+    
+    @IBAction func equalButtonPressed(_ sender: NumpadButton) {
+        insertText("=")
+    }
+    
     func insertText(_ string: String) {
         guard let range = target?.selectedRange else { return }
         if let textField = target as? UITextField, textField.delegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) == false {

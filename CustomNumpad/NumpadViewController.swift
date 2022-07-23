@@ -25,7 +25,7 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         let lastCharacter = numberString.last ?? "."
         var symbol: String {
             var tempArray = [String]()
-            let mathSymbols = "+-/x"
+            let mathSymbols = "+-/*"
             for character in numberString {
                 if mathSymbols.contains(character) {
                     tempArray.append(String(character))
@@ -43,15 +43,20 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
                 return numberString.components(separatedBy: symbol)
             }
         }
-        let amountOfDecimalSigns = "\(numbersArray.last ?? "")\(string)".filter({ $0 == Character(formatter.decimalSeparator) }).count
+        var floatNumberString: String {
+            let floatMidArray = lastCharacter == Character(formatter.decimalSeparator) ? numberString.replacingOccurrences(of: formatter.decimalSeparator, with: ".").dropLast().components(separatedBy: symbol).compactMap { Float($0) } : numberString.replacingOccurrences(of: formatter.decimalSeparator, with: ".").components(separatedBy: symbol).compactMap { Float($0) }
+            return "\(floatMidArray.first ?? 0)\(symbol)\(floatMidArray.last ?? 0)"
+        }
         
-        //allow to insert 0 after the decimal symbol to avoid formatting
+        let amountOfDecimals = "\(numbersArray.last ?? "")\(string)".filter({ $0 == Character(formatter.decimalSeparator) }).count
+        
+        //allow to insert 0 after the decimal symbol to avoid formatting i.e. 2.04
         formatter.minimumFractionDigits = numberString.last == Character(formatter.decimalSeparator) && string == "0" ? 1 : 0
         
-        //allow string to be changed by backspace button
+        //allow string to be modified by backspace button
         if string == "" { return false }
         
-        //allow numbers as first character, except math symbols
+        //allow numbers as a first character, except math symbols
         if numberString == "" {
             if Character(string).isNumber {
                 textField.text = string
@@ -60,24 +65,25 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
             }
         }
         //allow only one decimal symbol per number
-        else if amountOfDecimalSigns > 1 { return false }
+        else if amountOfDecimals > 1 { return false }
          
         if numbersArray.count > 1 {
         //if number is entered
             if Character(string).isNumber {
+                print(numbersArray)
                 textField.text = "\(formatter.string(for: Double("\(numbersArray.first?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")") ?? 0 as NSNumber) ?? "")\(symbol)\(formatter.string(for: Double("\(numbersArray.last?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")\(string)") ?? 0 as NSNumber) ?? "")"
         //if symbol is entered
             } else if string == formatter.decimalSeparator {
                 textField.text = "\(textField.text ?? "")\(string)"
             } else {
-        //perform calculation if last entered character is number
+        //perform calculation if last entered character is a number
                 if lastCharacter.isNumber {
-                    let expression = NSExpression(format: numberString.replacingOccurrences(of: formatter.decimalSeparator, with: "."))
-                    let answer =  expression.expressionValue(with: nil, context: nil)
+                    let expression = NSExpression(format: floatNumberString)
+                    let answer = expression.expressionValue(with: nil, context: nil)
                     textField.text = "\(formatter.string(from: answer as! NSNumber) ?? "")\(string)"
-        //perform calculation if last entered character is decimal symbol
+        //perform calculation if last entered character is a decimal symbol
                 } else if lastCharacter == Character(formatter.decimalSeparator) {
-                    let expression = NSExpression(format: String(numberString.dropLast()).replacingOccurrences(of: formatter.decimalSeparator, with: "."))
+                    let expression = NSExpression(format: floatNumberString)
                     let answer = expression.expressionValue(with: nil, context: nil)
                     textField.text = "\(formatter.string(from: answer as! NSNumber) ?? "")\(string)"
         //change math symbol before enter a second number
@@ -93,8 +99,6 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         //if math symbol is entered
                 if lastCharacter.isNumber {
                     textField.text = "\(textField.text ?? "")\(string)"
-                } else {
-                    textField.text = "\(numberString.dropLast())\(string)"
                 }
             }
         }

@@ -168,6 +168,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                     </preferredSymbolConfiguration>
                                                 </state>
+                                                <connections>
+                                                    <action selector="devideButtonPressed:" destination="-1" eventType="touchUpInside" id="rtn-3I-QJI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -238,6 +241,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                     </preferredSymbolConfiguration>
                                                 </state>
+                                                <connections>
+                                                    <action selector="multiplyButtonPressed:" destination="-1" eventType="touchUpInside" id="yy0-qq-Iwv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -298,6 +304,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                     </preferredSymbolConfiguration>
                                                 </state>
+                                                <connections>
+                                                    <action selector="equalButtonPressed:" destination="-1" eventType="touchUpInside" id="YcX-pk-EPA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
