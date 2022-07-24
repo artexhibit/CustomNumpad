@@ -25,7 +25,7 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         let lastCharacter = numberString.last ?? "."
         var symbol: String {
             var tempArray = [String]()
-            let mathSymbols = "+-/*"
+            let mathSymbols = "+-÷x"
             for character in numberString {
                 if mathSymbols.contains(character) {
                     tempArray.append(String(character))
@@ -43,9 +43,26 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
                 return numberString.components(separatedBy: symbol)
             }
         }
+        //turn numbers into Float and create a String with them to be able to receive a correct result from NSExpression
+        var floatNumberArray: [Float] {
+            if numberString.first == "-" {
+                let tempString = lastCharacter == Character(formatter.decimalSeparator) ? numberString.dropFirst().dropLast() : numberString.dropFirst()
+                var tempArray = tempString.components(separatedBy: symbol)
+                tempArray[0] = "-\(tempArray[0])"
+                return tempArray.compactMap { Float($0.replacingOccurrences(of: formatter.decimalSeparator, with: ".")) }
+            } else {
+                return numberString.components(separatedBy: symbol).compactMap { Float($0.replacingOccurrences(of: formatter.decimalSeparator, with: ".")) }
+            }
+        }
+        
         var floatNumberString: String {
-            let floatMidArray = lastCharacter == Character(formatter.decimalSeparator) ? numberString.replacingOccurrences(of: formatter.decimalSeparator, with: ".").dropLast().components(separatedBy: symbol).compactMap { Float($0) } : numberString.replacingOccurrences(of: formatter.decimalSeparator, with: ".").components(separatedBy: symbol).compactMap { Float($0) }
-            return "\(floatMidArray.first ?? 0)\(symbol)\(floatMidArray.last ?? 0)"
+            if numberString.contains("x") {
+                return "\(floatNumberArray.first ?? 0)\("*")\(floatNumberArray.last ?? 0)"
+            } else if numberString.contains("÷") {
+                return "\(floatNumberArray.first ?? 0)\("/")\(floatNumberArray.last ?? 0)"
+            } else {
+                return "\(floatNumberArray.first ?? 0)\(symbol)\(floatNumberArray.last ?? 0)"
+            }
         }
         
         let amountOfDecimals = "\(numbersArray.last ?? "")\(string)".filter({ $0 == Character(formatter.decimalSeparator) }).count
@@ -55,6 +72,10 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         
         //allow string to be modified by backspace button
         if string == "" { return false }
+        if string == "=" && numberString.last == Character(symbol) {
+            textField.text = "\(numberString.dropLast())"
+            return false
+        }
         
         //allow numbers as a first character, except math symbols
         if numberString == "" {
@@ -79,11 +100,11 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         //perform calculation if last entered character is a number
                 if lastCharacter.isNumber {
                     let result = performCalculation(format: floatNumberString)
-                    textField.text = "\(formatter.string(from: result) ?? "")\(string)"
+                    textField.text = string == "=" ? "\(formatter.string(from: result) ?? "")" : "\(formatter.string(from: result) ?? "")\(string)"
         //perform calculation if last entered character is a decimal symbol
                 } else if lastCharacter == Character(formatter.decimalSeparator) {
                     let result = performCalculation(format: floatNumberString)
-                    textField.text = "\(formatter.string(from: result) ?? "")\(string)"
+                    textField.text = string == "=" ? "\(formatter.string(from: result) ?? "")" : "\(formatter.string(from: result) ?? "")\(string)"
         //change math symbol before enter a second number
                 } else {
                     textField.text = "\(textField.text?.dropLast() ?? "")\(string)"

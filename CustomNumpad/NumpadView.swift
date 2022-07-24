@@ -52,6 +52,10 @@ class NumpadView: UIView, UIInputViewAudioFeedback {
     @IBAction func deleteButtonPressed(_ sender: NumpadButton) {
         target?.deleteBackward()
         insertText("")
+        
+        if let textField = target as? UITextField, textField.text?.count == 0 {
+            resetButton.setTitle(resetButtonTitle.pressed, for: .normal)
+        }
     }
     
     @IBAction func hideKeyboardButtonPressed(_ sender: NumpadButton) {
@@ -74,12 +78,12 @@ class NumpadView: UIView, UIInputViewAudioFeedback {
     }
     
     @IBAction func devideButtonPressed(_ sender: NumpadButton) {
-        insertText("/")
+        insertText("÷")
     }
     
     
     @IBAction func multiplyButtonPressed(_ sender: NumpadButton) {
-        insertText("*")
+        insertText("x")
     }
     
     @IBAction func equalButtonPressed(_ sender: NumpadButton) {
