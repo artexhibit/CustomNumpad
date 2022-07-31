@@ -22,6 +22,8 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         formatter.roundingMode = .down
         
         let numberString = "\(textField.text ?? "")".replacingOccurrences(of: formatter.groupingSeparator, with: "")
+        let rangeString = (((textField.text ?? "") as NSString).replacingCharacters(in: range, with: string)).replacingOccurrences(of: formatter.groupingSeparator, with: "")
+        
         let lastCharacter = numberString.last ?? "."
         var symbol: String {
             var tempArray = [String]()
@@ -34,16 +36,16 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
             return tempArray.last ?? ""
         }
         var numbersArray: [String] {
-            if numberString.first == "-" {
-                let positiveString = numberString.dropFirst()
+            if rangeString.first == "-" {
+                let positiveString = rangeString.dropFirst()
                 var tempArray = positiveString.components(separatedBy: symbol)
                 tempArray[0] = "-\(tempArray[0])"
                 return tempArray
             } else {
-                return numberString.components(separatedBy: symbol)
+                return rangeString.components(separatedBy: symbol)
             }
         }
-        //turn numbers into Float and create a String with them to be able to receive a correct result from NSExpression
+        //turn numbers into Float and create a String from them to be able to receive a correct result from NSExpression
         var floatNumberArray: [Float] {
             if numberString.first == "-" {
                 let tempString = lastCharacter == Character(formatter.decimalSeparator) ? numberString.dropFirst().dropLast() : numberString.dropFirst()
@@ -64,16 +66,13 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
                 return "\(floatNumberArray.first ?? 0)\(symbol)\(floatNumberArray.last ?? 0)"
             }
         }
-        
-        let amountOfDecimals = "\(numbersArray.last ?? "")\(string)".filter({ $0 == Character(formatter.decimalSeparator) }).count
-        
         //allow to insert 0 after the decimal symbol to avoid formatting i.e. 2.04
         formatter.minimumFractionDigits = numberString.last == Character(formatter.decimalSeparator) && string == "0" ? 1 : 0
         
         //allow string to be modified by backspace button
         if string == "" { return false }
         if string == "=" && numberString.last == Character(symbol) {
-            textField.text = "\(numberString.dropLast())"
+            textField.text = "\(formatter.string(for: Double(numberString.dropLast())) ?? "")"
             return false
         }
         
@@ -86,21 +85,27 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
             }
         }
         //allow only one decimal symbol per number
-        else if amountOfDecimals > 1 { return false }
+        for number in numbersArray {
+            let amountOfDecimalSigns = number.filter({$0 == "."}).count
+            if amountOfDecimalSigns > 1 { return false }
+        }
          
         if numbersArray.count > 1 {
         //if number is entered
             if Character(string).isNumber {
-                print(numbersArray)
-                textField.text = "\(formatter.string(for: Double("\(numbersArray.first?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")") ?? 0) ?? "")\(symbol)\(formatter.string(for: Double("\(numbersArray.last?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")\(string)") ?? 0) ?? "")"
+                textField.text = "\(formatter.string(for: Double("\(numbersArray.first?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")") ?? 0) ?? "")\(symbol)\(formatter.string(for: Double("\(numbersArray.last?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")") ?? 0) ?? "")"
         //if symbol is entered
             } else if string == formatter.decimalSeparator {
                 textField.text = "\(textField.text ?? "")\(string)"
             } else {
         //perform calculation if last entered character is a number
                 if lastCharacter.isNumber {
-                    let result = performCalculation(format: floatNumberString)
-                    textField.text = string == "=" ? "\(formatter.string(from: result) ?? "")" : "\(formatter.string(from: result) ?? "")\(string)"
+                    if floatNumberArray.count == 2 {
+                        let result = performCalculation(format: floatNumberString)
+                        textField.text = string == "=" ? "\(formatter.string(from: result) ?? "")" : "\(formatter.string(from: result) ?? "")\(string)"
+                    } else {
+                        textField.text = "\(textField.text ?? "")\(string)"
+                    }
         //perform calculation if last entered character is a decimal symbol
                 } else if lastCharacter == Character(formatter.decimalSeparator) {
                     let result = performCalculation(format: floatNumberString)
@@ -113,7 +118,7 @@ class NumpadViewController: UIViewController, UITextFieldDelegate {
         } else {
         //if number is entered
             if Character(string).isNumber {
-                textField.text = "\(formatter.string(for: Double("\(numbersArray.first?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")\(string)") ?? 0) ?? "")"
+                textField.text = "\(formatter.string(for: Double("\(numbersArray.first?.replacingOccurrences(of: formatter.decimalSeparator, with: ".") ?? "")") ?? 0) ?? "")"
             } else {
         //if math symbol is entered
                 if lastCharacter.isNumber {
