@@ -353,7 +353,6 @@
                 </visualEffectView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="V0A-kF-WY5"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="req-q9-lx2" firstAttribute="leading" secondItem="w35-oq-szw" secondAttribute="leading" id="0fX-Cx-EME"/>
                 <constraint firstItem="req-q9-lx2" firstAttribute="trailing" secondItem="w35-oq-szw" secondAttribute="trailing" id="Jvp-Gw-hsl"/>
