@@ -28,6 +28,15 @@ class NumpadView: UIView, UIInputViewAudioFeedback {
         setupDecimalButton()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard let sv = superview else { return }
+        let maskLayer = CAShapeLayer()
+        let bez = UIBezierPath(roundedRect: bounds, cornerRadius: 25)
+        maskLayer.path = bez.cgPath
+        sv.layer.mask = maskLayer
+    }
+    
     func setupDecimalButton() {
         decimalButton.setTitle(decimalSeparator, for: .normal)
     }

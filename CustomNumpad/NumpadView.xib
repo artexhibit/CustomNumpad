@@ -15,349 +15,312 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="w35-oq-szw">
+        <view opaque="NO" contentMode="scaleToFill" id="w35-oq-szw">
             <rect key="frame" x="0.0" y="0.0" width="552" height="446"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="req-q9-lx2">
-                    <rect key="frame" x="0.0" y="0.0" width="552" height="446"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d1H-9Q-j7P">
-                        <rect key="frame" x="0.0" y="0.0" width="552" height="446"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-mz-1DQ">
-                                <rect key="frame" x="15" y="20" width="522" height="396"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-p9-L4U">
-                                        <rect key="frame" x="0.0" y="0.0" width="522" height="91.5"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fo-rx-txj" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="7">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="Olp-Sv-L5S"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-z1-kBt" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="8">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="Bab-0z-AaE"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-sE-uyJ" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="9">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="jyM-Uk-ELD"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-jT-0wO" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="319" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadOrangeButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="AC">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="TEJ-n2-pZS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-SJ-vgm" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadBlueColor"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="keyboard.chevron.compact.down" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="hideKeyboardButtonPressed:" destination="-1" eventType="touchUpInside" id="Qek-5E-U9M"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ryL-j9-8Gp">
-                                        <rect key="frame" x="0.0" y="101.5" width="522" height="91.5"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATt-PW-v4y" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="4">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="bTD-P5-yN2"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToS-iL-gQp" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="5">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="YAw-6y-5nQ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSw-U5-1GF" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="6">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="Wfm-Zl-CXm"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uiw-M5-1xf" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="319" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadOrangeButtonColor"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="1"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="minus" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="minusButtonPressed:" destination="-1" eventType="touchUpInside" id="YnX-Hr-cgf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHS-oz-6Ou" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadOrangeButtonColor"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="divide" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="devideButtonPressed:" destination="-1" eventType="touchUpInside" id="rtn-3I-QJI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JRw-LQ-aMf">
-                                        <rect key="frame" x="0.0" y="203" width="522" height="91.5"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mal-m2-BW0" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="1">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="S8H-tf-3fm"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI1-ty-RLg" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="2">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="VHL-SG-uWo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EU-9l-FVK" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="3">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="zOS-Lm-LBI"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6Q-JT-JWy" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="319" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadOrangeButtonColor"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="plus" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="plusButtonPressed:" destination="-1" eventType="touchUpInside" id="dGl-Qy-yDl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9r-jQ-QQ9" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadOrangeButtonColor"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="multiply" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="multiplyButtonPressed:" destination="-1" eventType="touchUpInside" id="yy0-qq-Iwv"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uw9-qZ-Dfo">
-                                        <rect key="frame" x="0.0" y="304.5" width="522" height="91.5"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ld-d6-RQK" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title=".">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="decimalPressed:" destination="-1" eventType="touchUpInside" id="cUz-8h-laA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-LN-MlY" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="H6d-Vo-N5P"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-Sc-JPt" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadGrayButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="delete.left" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default">
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="deleteButtonPressed:" destination="-1" eventType="touchUpInside" id="O2j-2S-19Z"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGq-08-Kzm" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
-                                                <rect key="frame" x="319" y="0.0" width="203" height="91.5"/>
-                                                <color key="backgroundColor" name="NumpadOrangeButtonColor"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="equal" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="equalButtonPressed:" destination="-1" eventType="touchUpInside" id="YcX-pk-EPA"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="nde-Sc-JPt" firstAttribute="width" secondItem="5EU-9l-FVK" secondAttribute="width" id="4El-5L-MaG"/>
-                                    <constraint firstItem="mBP-LN-MlY" firstAttribute="width" secondItem="KI1-ty-RLg" secondAttribute="width" id="Htd-Ko-RcX"/>
-                                    <constraint firstItem="8ld-d6-RQK" firstAttribute="width" secondItem="mal-m2-BW0" secondAttribute="width" id="m9s-WZ-peK"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="sSl-mz-1DQ" firstAttribute="leading" secondItem="d1H-9Q-j7P" secondAttribute="leading" constant="80" id="CTL-eP-Fdl"/>
-                            <constraint firstItem="sSl-mz-1DQ" firstAttribute="top" secondItem="d1H-9Q-j7P" secondAttribute="top" constant="20" id="Db1-iD-Elh"/>
-                            <constraint firstAttribute="trailing" secondItem="sSl-mz-1DQ" secondAttribute="trailing" constant="15" id="KbS-0k-Ie2"/>
-                            <constraint firstItem="sSl-mz-1DQ" firstAttribute="leading" secondItem="d1H-9Q-j7P" secondAttribute="leading" constant="15" id="TJv-db-APH"/>
-                            <constraint firstAttribute="trailing" secondItem="sSl-mz-1DQ" secondAttribute="trailing" constant="80" id="ewL-8X-ZWo"/>
-                            <constraint firstAttribute="bottom" secondItem="sSl-mz-1DQ" secondAttribute="bottom" constant="30" id="g6s-Ye-LzN"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="CTL-eP-Fdl"/>
-                                <exclude reference="KbS-0k-Ie2"/>
-                                <exclude reference="TJv-db-APH"/>
-                                <exclude reference="ewL-8X-ZWo"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <include reference="CTL-eP-Fdl"/>
-                                <include reference="ewL-8X-ZWo"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="constraints">
-                                <include reference="KbS-0k-Ie2"/>
-                                <include reference="TJv-db-APH"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <blurEffect style="systemThickMaterial"/>
-                </visualEffectView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-mz-1DQ">
+                    <rect key="frame" x="15" y="20" width="522" height="396"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-p9-L4U">
+                            <rect key="frame" x="0.0" y="0.0" width="522" height="91.5"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fo-rx-txj" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="7">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="Olp-Sv-L5S"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-z1-kBt" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="8">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="Bab-0z-AaE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-sE-uyJ" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="9">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="jyM-Uk-ELD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-jT-0wO" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="319" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadOrangeColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="AC">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="TEJ-n2-pZS"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-SJ-vgm" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadBlueColor"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="keyboard.chevron.compact.down" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="hideKeyboardButtonPressed:" destination="-1" eventType="touchUpInside" id="Qek-5E-U9M"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ryL-j9-8Gp">
+                            <rect key="frame" x="0.0" y="101.5" width="522" height="91.5"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATt-PW-v4y" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="4">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="bTD-P5-yN2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToS-iL-gQp" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="5">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="YAw-6y-5nQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSw-U5-1GF" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="6">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="Wfm-Zl-CXm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uiw-M5-1xf" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="319" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadOrangeColor"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="1"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="minus" catalog="system">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="minusButtonPressed:" destination="-1" eventType="touchUpInside" id="YnX-Hr-cgf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHS-oz-6Ou" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadOrangeColor"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="divide" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="devideButtonPressed:" destination="-1" eventType="touchUpInside" id="rtn-3I-QJI"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JRw-LQ-aMf">
+                            <rect key="frame" x="0.0" y="203" width="522" height="91.5"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mal-m2-BW0" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="1">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="S8H-tf-3fm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI1-ty-RLg" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="2">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="VHL-SG-uWo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EU-9l-FVK" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="3">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="zOS-Lm-LBI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6Q-JT-JWy" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="319" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadOrangeColor"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="plus" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="plusButtonPressed:" destination="-1" eventType="touchUpInside" id="dGl-Qy-yDl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9r-jQ-QQ9" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="425.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadOrangeColor"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="multiply" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="multiplyButtonPressed:" destination="-1" eventType="touchUpInside" id="yy0-qq-Iwv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uw9-qZ-Dfo">
+                            <rect key="frame" x="0.0" y="304.5" width="522" height="91.5"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ld-d6-RQK" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=".">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="decimalPressed:" destination="-1" eventType="touchUpInside" id="cUz-8h-laA"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-LN-MlY" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="106.5" y="0.0" width="96.5" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="0">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="H6d-Vo-N5P"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-Sc-JPt" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="213" y="0.0" width="96" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadGrayColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="delete.left" catalog="system">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default">
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="deleteButtonPressed:" destination="-1" eventType="touchUpInside" id="O2j-2S-19Z"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGq-08-Kzm" customClass="NumpadButton" customModule="CustomNumpad" customModuleProvider="target">
+                                    <rect key="frame" x="319" y="0.0" width="203" height="91.5"/>
+                                    <color key="backgroundColor" name="NumpadOrangeColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="equal" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="equalButtonPressed:" destination="-1" eventType="touchUpInside" id="YcX-pk-EPA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nde-Sc-JPt" firstAttribute="width" secondItem="5EU-9l-FVK" secondAttribute="width" id="4El-5L-MaG"/>
+                        <constraint firstItem="mBP-LN-MlY" firstAttribute="width" secondItem="KI1-ty-RLg" secondAttribute="width" id="Htd-Ko-RcX"/>
+                        <constraint firstItem="8ld-d6-RQK" firstAttribute="width" secondItem="mal-m2-BW0" secondAttribute="width" id="m9s-WZ-peK"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="V0A-kF-WY5"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="req-q9-lx2" firstAttribute="leading" secondItem="w35-oq-szw" secondAttribute="leading" id="0fX-Cx-EME"/>
-                <constraint firstItem="req-q9-lx2" firstAttribute="trailing" secondItem="w35-oq-szw" secondAttribute="trailing" id="Jvp-Gw-hsl"/>
-                <constraint firstAttribute="bottom" secondItem="req-q9-lx2" secondAttribute="bottom" id="LWh-tA-zC4"/>
-                <constraint firstItem="req-q9-lx2" firstAttribute="top" secondItem="w35-oq-szw" secondAttribute="top" id="hrp-Zn-ETe"/>
+                <constraint firstItem="V0A-kF-WY5" firstAttribute="trailing" secondItem="sSl-mz-1DQ" secondAttribute="trailing" constant="15" id="7wx-01-vBL"/>
+                <constraint firstItem="sSl-mz-1DQ" firstAttribute="leading" secondItem="V0A-kF-WY5" secondAttribute="leading" constant="15" id="LM1-iD-DCh"/>
+                <constraint firstAttribute="bottom" secondItem="sSl-mz-1DQ" secondAttribute="bottom" constant="30" id="cta-dj-m4j"/>
+                <constraint firstItem="sSl-mz-1DQ" firstAttribute="top" secondItem="w35-oq-szw" secondAttribute="top" constant="20" id="xxZ-Lt-2jo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="161" y="682"/>
@@ -374,11 +337,11 @@
         <namedColor name="NumpadBlueColor">
             <color red="0.097999997437000275" green="0.57099997997283936" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="NumpadGrayButtonColor">
-            <color red="0.81972497700000002" green="0.81931352619999998" blue="0.83921831849999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="NumpadGrayColor">
+            <color red="0.89898800748454333" green="0.90101400095226059" blue="0.93193038786300508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="NumpadOrangeButtonColor">
-            <color red="0.97068423029999995" green="0.81508302690000001" blue="0.53327709440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="NumpadOrangeColor">
+            <color red="0.97100001573562622" green="0.81499999761581421" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
