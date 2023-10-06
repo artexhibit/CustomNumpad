@@ -1,4 +1,4 @@
-<img align="right" width="380" src="https://raw.githubusercontent.com/artexhibit/CustomNumpad/master/Assets/preview.gif">
+<img align="right" width="210" src="https://raw.githubusercontent.com/artexhibit/CustomNumpad/master/Assets/preview.gif">
 
 # CustomNumpad
 
