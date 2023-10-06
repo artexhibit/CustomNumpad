@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2DFC192AD07E9A00FF1434 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DFC182AD07E9A00FF1434 /* Assets */; };
 		781088132870C3C400466969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088122870C3C400466969 /* AppDelegate.swift */; };
 		781088152870C3C400466969 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088142870C3C400466969 /* SceneDelegate.swift */; };
 		781088172870C3C400466969 /* NumpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781088162870C3C400466969 /* NumpadViewController.swift */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2DFC182AD07E9A00FF1434 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		0B2DFC1C2AD07F0B00FF1434 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7810880F2870C3C400466969 /* CustomNumpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNumpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781088122870C3C400466969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		781088142870C3C400466969 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,8 @@
 		781088062870C3C400466969 = {
 			isa = PBXGroup;
 			children = (
+				0B2DFC1C2AD07F0B00FF1434 /* README.md */,
+				0B2DFC182AD07E9A00FF1434 /* Assets */,
 				781088112870C3C400466969 /* CustomNumpad */,
 				781088102870C3C400466969 /* Products */,
 			);
@@ -104,7 +109,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					7810880E2870C3C400466969 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -138,6 +143,7 @@
 				7810881F2870C3C600466969 /* LaunchScreen.storyboard in Resources */,
 				7810881C2870C3C600466969 /* Assets.xcassets in Resources */,
 				7810881A2870C3C400466969 /* Main.storyboard in Resources */,
+				0B2DFC192AD07E9A00FF1434 /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +188,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -214,6 +221,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -242,6 +250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -274,6 +283,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
